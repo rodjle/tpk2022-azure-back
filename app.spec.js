@@ -1,10 +1,14 @@
-const request=require("supertest");
+
 const app=require("./app");
-const database=require("./database/database.local");
+const clienteDao=require("./database/dao/cliente-dao");
+const request=require("supertest");
+
+
+
 
 describe("Conjunto de testes app",()=>{
 
-    it ("Testando GetInfo Endpoint",async()=>{
+    it("Testando GetInfo Endpoint",async()=>{
         //cenário
         const esperado="geekxxx";
         //execução
@@ -15,7 +19,7 @@ describe("Conjunto de testes app",()=>{
     });
 
     it("Ao salvar um cliente o endpoint deve retornar Ok",async()=>{
-        const databaseSpy = jest.spyOn(database, 'gravarDados');
+        const databaseSpy = jest.spyOn(clienteDao, 'gravarDados');
         databaseSpy.mockReturnValue(true);
 
       
@@ -36,7 +40,7 @@ describe("Conjunto de testes app",()=>{
     });
 
     it("Ao tentar salvar um cliente e der um erro o endpoint deve retornar  NOk e 401",async()=>{
-        const databaseSpy = jest.spyOn(database, 'gravarDados');
+        const databaseSpy = jest.spyOn(clienteDao, 'gravarDados');
         databaseSpy.mockReturnValue(false);//gravarDados Sempre Vai Retornar false
 
       
