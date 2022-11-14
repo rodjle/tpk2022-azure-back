@@ -1,4 +1,4 @@
-const {sum}=require("./sum");
+const {sum}=require("../sum");
 
 test ("Somando 1+2 deve retornar 3",()=>{
     //cenário

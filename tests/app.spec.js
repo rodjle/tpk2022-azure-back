@@ -1,6 +1,6 @@
 
-const app=require("./app");
-const clienteDao=require("./database/dao/cliente-dao");
+const app=require("../app");
+const clienteDao=require("../database/dao/cliente-dao");
 const request=require("supertest");
 
 
