@@ -1,8 +1,6 @@
 const database = require("../db/dbconfig");
 const Cliente = require("../models/cliente");
 
-//sugestão -- que tal criar uma interface e implementar?
-
 async function gravarDados(dados) {
   try {
     const novoCliente = await Cliente.create({
