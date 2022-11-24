@@ -47,4 +47,84 @@ async function atualizarDados(id, dados) {
       }
 }
 
-module.exports = { buscaTodosDados, buscaDados, removerRegistro, gravarDados, atualizarDados };
+function sum(n1, n2){
+  return n1 + n2;
+}
+
+function minus(n1, n2){
+  return n1 - n2;
+}
+
+function multiply(n1, n2){
+  return n1 * n2;
+}
+
+function divide(n1, n2){
+  return n1 * n2;
+}
+
+function sum2(n1, n2){
+  return n1 + n2;
+}
+
+function minus2(n1, n2){
+  return n1 - n2;
+}
+
+function multiply2(n1, n2){
+  return n1 * n2;
+}
+
+function divide2(n1, n2){
+  return n1 * n2;
+}
+
+function sum3(n1, n2){
+  return n1 + n2;
+}
+
+function minus3(n1, n2){
+  return n1 - n2;
+}
+
+function multiply3(n1, n2){
+  return n1 * n2;
+}
+
+function divide3(n1, n2){
+  return n1 * n2;
+}
+
+function sum4(n1, n2){
+  return n1 + n2;
+}
+
+function minus4(n1, n2){
+  return n1 - n2;
+}
+
+function multiply4(n1, n2){
+  return n1 * n2;
+}
+
+function divide4(n1, n2){
+  return n1 * n2;
+}
+
+function sum5(n1, n2){
+  return n1 + n2;
+}
+
+function minus5(n1, n2){
+  return n1 - n2;
+}
+
+function multiply5(n1, n2){
+  return n1 * n2;
+}
+
+function divide5(n1, n2){
+  return n1 * n2;
+}
+
+module.exports = {sum5, divide5,multiply5, minus5,sum4, divide4,multiply4, minus4, sum3, divide3, multiply3, minus3,sum2, minus2, divide2, multiply2, divide ,multiply, sum, minus, buscaTodosDados, buscaDados, removerRegistro, gravarDados, atualizarDados };

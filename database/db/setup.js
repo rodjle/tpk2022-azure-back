@@ -1,5 +1,4 @@
 const {database,check}=require("./dbconfig");
-const Cliente=require("../models/cliente");
 const Produto=require("../models/produto");
 
 async function init() {
