@@ -1,5 +1,5 @@
-const database = require("../db/dbconfig");
-const Produto = require("../models/produto");
+const database = require("../../database/db/dbconfig");
+const Produto = require("./Product");
 
 async function buscaTodosDados() {
     return await Produto.findAll();

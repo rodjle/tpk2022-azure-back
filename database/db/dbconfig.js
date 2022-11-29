@@ -1,20 +1,14 @@
 const { Sequelize } = require('sequelize');
 
+const database = new Sequelize('tpk2022', 'superadmin', 'Secretpassword!', {
+  dialect: 'mysql',
+  host: 'msqldb.mysql.database.azure.com',
+  port: '3306'
+});
 
-// Option 1: Passing a connection URI
-//Existem dados sensíveis aqui - pensar em usar .env e keyvault
-//tpk2022=nome do database
-//rodjle=usuario
-//senha=88*[]]$goRSpo##?xx  //cuidado , dados sensiveis
-const database = new Sequelize('tpk2022','superadmin','Secretpassword!',{
-    dialect:'mysql',
-    host:'msqldb.mysql.database.azure.com',
-    port:'3306'
-}); // Example for mysql
-
-async function check(){
+async function check() {
   console.log('***Tentando autenticar***');
-try {
+  try {
     await database.authenticate();
     console.log('*** Conexão com banco de dados estabelecida com sucesso***');
   } catch (error) {
@@ -22,4 +16,4 @@ try {
   }
 }
 
-module.exports={database,check};
+module.exports = { database, check };
