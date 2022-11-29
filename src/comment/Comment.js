@@ -1,17 +1,20 @@
 const { Model, DataTypes } = require('sequelize');
-const { database } = require('../db/dbconfig.js');
+const { database } = require('../../database/db/dbconfig.js');
 
 class Comment extends Model { }
 
 Comment.init({
     description: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     },
     postId: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        allowNull: false
     },
     userId: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        allowNull: false
     }
 }, {
     sequelize: database,
