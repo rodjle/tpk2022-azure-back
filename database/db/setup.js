@@ -1,8 +1,7 @@
 const { database, check } = require("./dbconfig");
-const Product = require("../../src/product/Product");
-const Role = require('../../src/role/Role');
 
-const User = require('../models/user');
+const Role = require('../../src/role/Role');
+const User = require('../../src/user/User');
 const Post = require('../models/post'); 
 const Comment = require('../models/comment');
 const Reaction = require('../models/reaction');
