@@ -1,17 +1,20 @@
 const { Model, DataTypes } = require('sequelize');
-const { database } = require('../db/dbconfig.js');
+const { database } = require('../../database/db/dbconfig');
 
 class Reaction extends Model { }
 
 Reaction.init({
     upvote: {
-        type: DataTypes.BOOLEAN
+        type: DataTypes.BOOLEAN,
+        allowNull: false
     },
     postId: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        allowNull: false
     },
     userId: {
-        type: DataTypes.INTEGER
+        type: DataTypes.INTEGER,
+        allowNull: false
     }
 }, {
     sequelize: database,
